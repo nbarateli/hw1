@@ -1,7 +1,6 @@
-const DELAY = 2700;
+const DELAY = 500;
 
 class Circle {
-    i;
 
     constructor(images) {
         this.images = images;
@@ -17,10 +16,9 @@ class Circle {
 
 
 function createSlideshow(slideshowElem, duration) {
-    let images = slideshowElem.getElementsByTagName('img');
-    for (let i = 1; i < images.length; i++) {
-        images[i].classList.add('hidden')
-    }
+    let images = $(slideshowElem).find('img');
+    images.each((i, e) => e.classList.add('hidden'));
+    images[0].classList.remove('hidden');
     let circle = new Circle(images);
     setTimeout(() => {
         setInterval(() => {
