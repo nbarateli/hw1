@@ -40,9 +40,10 @@ $(document).ready(function () {
     )
     ;
     validateField(document.getElementById('password'),
-        "The password field should be at least 8 characters long and not contain any consequent whitespaces.", el =>
-            //
-            new RegExp(/^(?!.*\s{2,}).{8,}$/).test(el)
+        "The password field should be at least 8 characters long and not contain any whitespaces.", el =>
+
+            // new RegExp(/^(?!.*\s{2,}).{8,}$/)
+            new RegExp(/^([^\s]){8,}$/).test(el)
     );
 
     validateField(document.getElementById('email'),
