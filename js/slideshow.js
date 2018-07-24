@@ -24,7 +24,6 @@ function createSlideshow(slideshowElem, duration) {
         setInterval(() => {
             circle.next().classList.add('hidden');
             circle.next().classList.remove('hidden');
-
         }, duration)
     }, duration)
 }
