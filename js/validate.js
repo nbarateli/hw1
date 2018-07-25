@@ -3,6 +3,7 @@ function insertAfter(newNode, referenceNode) {
 }
 
 function validateField(fieldElem, infoMessage, validateFn) {
+    fieldElem = $(fieldElem)[0];
     let info = document.createElement('span');
     info.classList.add('hidden');
     info.classList.add('info');
