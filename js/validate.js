@@ -31,19 +31,17 @@ function charInRange(number, start, end) {
 
 $(document).ready(function () {
     validateField(document.getElementById('username'),
-        "The username field must contain only alphabetical or numeric characters.", el =>
-            new RegExp(/^[a-z0-9]*$/i).test(el.toLowerCase())
-    )
-    ;
+        "The username field must contain only alphabetical or numeric characters.",
+        el => new RegExp(/^[a-z0-9]*$/i).test(el.toLowerCase())
+    );
     validateField(document.getElementById('password'),
-        "The password field should be at least 8 characters long and not contain any whitespaces.", el =>
-
-            // new RegExp(/^(?!.*\s{2,}).{8,}$/)
-            new RegExp(/^([^\s]){8,}$/i).test(el)
+        "The password field should be at least 8 characters long and not contain any whitespaces.",
+        el => new RegExp(/^([^\s]){8,}$/i).test(el)
+        // new RegExp(/^(?!.*\s{2,}).{8,}$/)
     );
 
     validateField(document.getElementById('email'),
-        "The email address field should contain a @ character and domain address.", el =>
-            new RegExp(/^[^@].*@{1}[^@]+\.[^@]+([a-z0-9])+$/i).test(el))
-
+        "The email address field should contain a @ character and domain address.",
+        el => new RegExp(/^[^@].*@{1}[^@]+\.[^@]+([a-z0-9])+$/i).test(el)
+    );
 });
