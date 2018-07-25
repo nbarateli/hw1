@@ -16,12 +16,7 @@ function validateField(fieldElem, infoMessage, validateFn) {
                 return
             }
             info.classList.remove('hidden');
-            if (validateFn(e.target.value)) {
-                info.innerText = "ok";
-            }
-            else {
-                info.innerText = infoMessage
-            }
+            info.innerText = validateFn(e.target.value) ? "ok" : infoMessage;
         }
     )
 }
