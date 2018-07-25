@@ -9,7 +9,7 @@ class Circle {
 
     next() {
         this.i = (this.i + 1) % this.images.length;
-        return this.images[this.i]
+        return this.images[this.i];
     }
 
 }
@@ -31,5 +31,5 @@ function createSlideshow(slideshowElem, duration) {
 $(document).ready(function () {
     $('.slideshow').each(
         (i, e) => createSlideshow(e, DELAY)
-    )
+    );
 });
